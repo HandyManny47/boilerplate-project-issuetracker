@@ -4,7 +4,7 @@ const { ObjectId } = require("mongoose").Types;
 module.exports = function (app) {
   const data = [{
     "_id": new Object("5d76aafa28deef55e9933aaa"),
-    "project": "issueT",
+    "project": "apitest",
     "issue_title": "create login system.",
     "issue_text": "login requires username and password.",
     "created_on": "2023-05-08T06:35:14.240Z",
@@ -14,7 +14,7 @@ module.exports = function (app) {
     "open": true,
     "status_text": "In QA"
   }];
-  
+
   function shallowEqual(object1, object2) {
     const keys1 = Object.keys(object1);
     const keys2 = Object.keys(object2);
@@ -149,8 +149,7 @@ module.exports = function (app) {
         return
       }
       const item = data[itemIndex]
-      console.log(itemIndex)
-      console.log(data[item["index"]])
+     
 
       const originalItem = {...item};
 
@@ -186,7 +185,7 @@ module.exports = function (app) {
       item["updated_on"] = new Date();
       item["updated_on"].setSeconds(item["updated_on"].getSeconds() + 3);
       data[item["index"]] = item;
-      console.log(data[item["index"]])
+      
       res.send({ result: 'successfully updated', '_id': _id });
     } catch (e) {
       // TODO: NEXT STEP IS TO PRINT THE ERRORS FROM CATCH AND FIGURE OUT WHY ITS NOT WORKING.
