@@ -4,16 +4,17 @@ const { ObjectId } = require("mongoose").Types;
 module.exports = function (app) {
   const data = [{
     "_id": new Object("5d76aafa28deef55e9933aaa"),
-    "project": "apitest",
-    "issue_title": "Fix error in posting data",
-    "issue_text": "When we post data it has an error.",
-    "created_on": "2017-01-08T06:35:14.240Z",
-    "updated_on": "2017-01-08T06:35:14.240Z",
+    "project": "issueT",
+    "issue_title": "create login system.",
+    "issue_text": "login requires username and password.",
+    "created_on": "2023-05-08T06:35:14.240Z",
+    "updated_on": "2023-05-08T06:35:14.240Z",
     "created_by": "Joe",
     "assigned_to": "Joe",
     "open": true,
     "status_text": "In QA"
   }];
+  
   function shallowEqual(object1, object2) {
     const keys1 = Object.keys(object1);
     const keys2 = Object.keys(object2);

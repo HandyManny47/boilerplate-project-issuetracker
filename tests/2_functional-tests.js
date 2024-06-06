@@ -10,7 +10,7 @@ chai.use(chaiHttp);
 suite("Functional Tests", function () {
   var testId;
   var invalidId = new ObjectId();
-  test("Test POST /api/issues/apitest for each field", (done) => {
+  test("POST /api/issues/apitest for each field", (done) => {
     chai
       .request(server)
       .post("/api/issues/apitest")
@@ -34,7 +34,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test POST /api/issues/apitest for required fields", (done) => {
+  test("POST /api/issues/apitest for required fields", (done) => {
     chai
       .request(server)
       .post("/api/issues/apitest")
@@ -53,7 +53,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test POST /api/issues/apitest with missing required fields", (done) => {
+  test("POST /api/issues/apitest with missing required fields", (done) => {
     chai
       .request(server)
       .post("/api/issues/apitest")
@@ -69,7 +69,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test GET /api/issues/apitest", (done) => {
+  test("GET /api/issues/apitest", (done) => {
     chai
       .request(server)
       .get("/api/issues/apitest")
@@ -82,7 +82,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test GET /api/issues/apitest with one filter", (done) => {
+  test("GET /api/issues/apitest with one filter", (done) => {
     chai
       .request(server)
       .get("/api/issues/apitest?open=true")
@@ -95,7 +95,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test GET /api/issues/apitest with multiple filters", (done) => {
+  test("GET /api/issues/apitest with multiple filters", (done) => {
     chai
       .request(server)
       .get('/api/issues/apitest?issue_title="test"&issue_text="test"&open=true')
@@ -108,7 +108,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test PUT /api/issues/apitest on one field", (done) => {
+  test("PUT /api/issues/apitest on one field", (done) => {
     chai.request(server)
       .put('/api/issues/apitest')
       .send({
@@ -124,7 +124,7 @@ suite("Functional Tests", function () {
         done();
       });
   });
-  test("Test PUT /api/issues/apitest on multiple fields", (done) => {
+  test("PUT /api/issues/apitest on multiple fields", (done) => {
     chai
       .request(server)
       .put("/api/issues/apitest")
@@ -151,7 +151,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test PUT /api/issues/apitest with missing _id", (done) => {
+  test("PUT /api/issues/apitest with missing _id", (done) => {
     chai
       .request(server)
       .put("/api/issues/apitest")
@@ -169,7 +169,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test PUT /api/issues/apitest with no fields to update", (done) => {
+  test("PUT /api/issues/apitest with no fields to update", (done) => {
     chai
       .request(server)
       .put("/api/issues/apitest")
@@ -190,7 +190,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test PUT /api/issues/apitest with invalid _id", (done) => {
+  test("PUT /api/issues/apitest with invalid _id", (done) => {
     chai
       .request(server)
       .put("/api/issues/apitest")
@@ -212,7 +212,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test DELETE /api/issues/apitest", (done) => {
+  test("DELETE /api/issues/apitest", (done) => {
     chai
       .request(server)
       .delete("/api/issues/apitest")
@@ -233,7 +233,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test DELETE /api/issues/apitest with an invalid _id", (done) => {
+  test("DELETE /api/issues/apitest with an invalid _id", (done) => {
     chai
       .request(server)
       .delete("/api/issues/apitest")
@@ -254,7 +254,7 @@ suite("Functional Tests", function () {
         }
       });
   });
-  test("Test DELETE /api/issues/apitest with missing _id", (done) => {
+  test("DELETE /api/issues/apitest with missing _id", (done) => {
     chai
       .request(server)
       .delete("/api/issues/apitest")
